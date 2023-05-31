@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.maincontainer {
+    background-image: url("heart-gbd22224d3_1920.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+}
+
+.container {
+    backdrop-filter: blur(20px);
+    padding: 90px;
+    width: 70%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.quote {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.heart1 {
+    /* background: linear-gradient(to bottom, rgba(51, 216, 222, 0.769), transparent); */
+    padding: 30px;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.heart1 h2 {
+    font-size: 36px;
+}
+
+.mainQuote {
+    padding: 10px;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainQuote h1 {
+    color: #fff;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 100;
+    justify-self: center;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 0;
+    margin: 8px 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: #d0d0d0;
+}
+
+input::placeholder {
+    color: #d0d0d0;
+}
+
+input[type="text"]:focus {
+    border-bottom: 2px solid #8aff60;
+}
+
+input[type="submit"] {
+    width: 15%;
+    background-color: rgba(33, 215, 33, 0.5);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #36c83d;
+    transform: scale(1.1);
+}
+
+.heart1 {
+    color: white;
+}
+
+.form_field {
+    background: rgba(0, 0, 0, 0.3);
+    width: 65%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(20px);
+    color: #ffffff;
+}
+
+.form_field label {
+    font-weight: 500;
+}

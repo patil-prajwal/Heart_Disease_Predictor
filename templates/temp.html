@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clinical Support system for Prediction of Heart Disease</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.maincontainer {
+    background-image: url(https://cdn.pixabay.com/photo/2015/05/31/10/55/heart-791047_960_720.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+}
+
+.container {
+    backdrop-filter: blur(20px);
+    padding: 90px;
+    width: 70%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.quote {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.heart1 {
+    /* background: linear-gradient(to bottom, rgba(51, 216, 222, 0.769), transparent); */
+    padding: 30px;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.heart1 h2 {
+    font-size: 36px;
+}
+
+.mainQuote {
+    padding: 10px;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainQuote h1 {
+    color: #fff;
+    font-size: 60px;
+    text-align: left;
+    font-weight: 100;
+    justify-self: center;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px 0;
+    margin: 8px 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: #d0d0d0;
+}
+
+input::placeholder {
+    color: #d0d0d0;
+}
+
+input[type="text"]:focus {
+    border-bottom: 2px solid #8aff60;
+}
+
+input[type="submit"] {
+    width: 15%;
+    background-color: rgba(33, 215, 33, 0.5);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #36c83d;
+    transform: scale(1.1);
+}
+
+.heart1 {
+    color: white;
+}
+
+.form_field {
+    background: rgba(0, 0, 0, 0.3);
+    width: 65%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(20px);
+    color: #ffffff;
+}
+
+.form_field label {
+    font-weight: 500;
+}
+    </style>
+  </head>
+  <body>
+    <center>
+      <div class="maincontainer">
+        <div class="quote">
+          <div class="heart1">
+            <h2>
+              Heart Disease <br />
+              Predictor
+            </h2>
+          </div>
+          <div class="mainQuote">
+            <h1>With a healthy heart, the beat goes on.</h1>
+          </div>
+        </div>
+
+        <div class="container">
+          <form action="/output" method="GET">
+            <div class="form_field">
+              <label for="z1">Enter Your Age</label>
+              <input type="text" name="z1" placeholder="e.g. 21" />
+            </div>
+
+            <div class="form_field">
+              <label for="z2">Resting blood pressure (in mm Hg)</label>
+              <input type="text" name="z2" placeholder="e.g. 80" />
+            </div>
+
+            <div class="form_field">
+              <label for="z3">Cholestoral in mg/dl</label>
+              <input type="text" name="z3" placeholder="e.g. 200 mg/dl" />
+            </div>
+
+            <div class="form_field">
+              <label for="z4">Maximum heart rate</label>
+              <input type="text" name="z4" placeholder="e.g. 170" />
+            </div>
+
+            <div class="form_field">
+              <label for="z5">Cardiac stress test</label>
+              <input type="text" name="z5" placeholder="Enter here" />
+            </div>
+
+            <div class="form_field">
+              <label for="z6">Gender</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z6" value="">Male</option>
+                <option name="z6" value="">Female</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z7">Chest pain (typical angina)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z7" value="">Yes</option>
+                <option name="z7" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z8">Chest pain (atypical angina)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z8" value="">Yes</option>
+                <option name="z8" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z9">Chest pain (non-anginal pain)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z9" value="">Yes</option>
+                <option name="z9" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z10">Fasting blood sugar (more than 120 mg/dl)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z10" value="">Yes</option>
+                <option name="z10" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z11">Resting electrocardiographic(Normal)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z11" value="">Yes</option>
+                <option name="z11" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z12"
+                >Resting electrocardiographic(Greater than 0.05mV)</label
+              >
+              <select>
+                <option value="">Select</option>
+                <option name="z12" value="">Yes</option>
+                <option name="z12" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z13">Exercise induced angina</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z13" value="">Yes</option>
+                <option name="z13" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z14">Upsloping</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z14" value="">Yes</option>
+                <option name="z14" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z15">Flat Sloping</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z15" value="">Yes</option>
+                <option name="z15" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z16">No. of major vessels is 0</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z16" value="">Yes</option>
+                <option name="z16" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z17">No. of major vessels is 1</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z17" value="">Yes</option>
+                <option name="z17" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z18">No. of major vessels is 2</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z18" value="">Yes</option>
+                <option name="z18" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z19">No. of major vessels is 3</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z19" value="">Yes</option>
+                <option name="z19" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z20">Thal=3 (Normal)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z20" value="">Yes</option>
+                <option name="z20" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z21">Thal=6 (Fixed Defect)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z21" value="">Yes</option>
+                <option name="z21" value="">No</option>
+              </select>
+            </div>
+
+            <div class="form_field">
+              <label for="z22">Thal=7 (Reversable defect)</label>
+              <select>
+                <option value="">Select</option>
+                <option name="z22" value="">Yes</option>
+                <option name="z22" value="">No</option>
+              </select>
+            </div>
+
+            <input value="Predict" type="submit" />
+          </form>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>
