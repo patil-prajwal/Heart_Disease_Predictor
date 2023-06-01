@@ -1,0 +1,14 @@
+
+##  Save file at -   /etc/systemd/system/flask_app.service
+
+[Unit]
+Description=Heart Disease Predictor Application
+
+[Service]
+User=root
+WorkingDirectory=/root/Heart_Disease_Predictor
+ExecStart=/usr/bin/python3 /root/Heart_Disease_Predictor/app.py
+
+Restart=always
+[Install]
+WantedBy=multi-user.target
